@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option go_package = "/v1";
+
+service PortDomain {
+    rpc CreatePort(CreatePortRequest) returns (CreatePortResponse);
+    rpc ReadPort(ReadPortRequest) returns (ReadPortResponse);
+}
+
+message CreatePortRequest {
+    Port port = 1;
+}
+
+message CreatePortResponse {
+    Port port = 1;
+}
+
+message ReadPortRequest {
+    string portID = 1;
+}
+
+message ReadPortResponse {
+    Port port = 1;
+}
+
+message Port {
+    string portID = 1;
+    string name = 2;
+    string city = 3;
+    string country = 4;
+    repeated string alias = 5;
+    repeated string regions = 6;
+    repeated float coordinates = 7;
+    string province = 8;
+    string timezone = 9;
+    repeated string  unlocs = 10;
+    string code = 11;
+}
