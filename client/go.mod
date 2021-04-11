@@ -1,4 +1,4 @@
-module github.com/lrotermund/port-challenge
+module github.com/lrotermund/port-challenge/client
 
 go 1.15
 

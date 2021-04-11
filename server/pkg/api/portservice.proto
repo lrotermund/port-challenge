@@ -12,7 +12,7 @@ message CreatePortRequest {
 }
 
 message CreatePortResponse {
-    Port port = 1;
+    string portID = 1;
 }
 
 message ReadPortRequest {
